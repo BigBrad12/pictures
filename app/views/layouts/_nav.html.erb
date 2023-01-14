@@ -1,4 +1,13 @@
-<div class="container">
-  <h1><%= link_to "Welcome", root_path %></h1>
+<div class="group">
+  <div class="container">
+    <h1><%= link_to "Welcome", root_path %></h1>
+      <div class="nav-links">
+        <% if !user_signed_in? %>
+          <h5><%= link_to "Sign-in", new_user_session_path %></h4>
+        <% else %>
+          <h4><%= link_to("Sign-out", destroy_user_session_path, data: { turbo_method: :delete }) %></h4>
+        <% end %>
+      </div>
+  </div>
 </div>
 <hr class="solid">
