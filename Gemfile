@@ -17,9 +17,11 @@ gem "puma", "~> 5.0"
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"
 gem 'devise'
-
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'image_magick'
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
-gem "turbo-rails"
+# gem "turbo-rails"
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
