@@ -1,6 +1,6 @@
 class ImagesController < ApplicationController
   before_action :set_image, only: %i[ show edit update destroy ]
-  # this didn't work before_action :set_user, only: %i[ show create edit update destroy ]
+  # this didn't work to fix user_id being nil from form submission => before_action :set_user, only: %i[ show create edit update destroy ]
 
   # GET /images or /images.json
   def index
@@ -28,10 +28,8 @@ class ImagesController < ApplicationController
     respond_to do |format|
       if @image.save
         format.html { redirect_to image_url(@image), notice: "Image was successfully created." }
-        format.json { render :show, status: :created, location: @image }
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @image.errors, status: :unprocessable_entity }
       end
     end
   end
