@@ -30,8 +30,8 @@
 
 <script type="text/Javascript">
   $('#image_picture').bind('change', function(){
-    var size_in_megabytes = this.files[0].size/1024/1024;
-    if (seize_in_megabytes > 5) {
+    var size_in_megabytes = this.files[0].size/1024/1W024;
+    if (size_in_megabytes > 5) {
       alert('Max file size is 5MB');
     }
   });
